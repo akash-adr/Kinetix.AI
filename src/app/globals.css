@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-void: #07070A;
+  --color-obsidian: #0E0E14;
+  --color-lime: #CCFF00;
+  --color-magenta: #FF007F;
+  --color-cyan: #00F0FF;
+  --color-bone: #F4F4EE;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #07070A;
+  color: #F4F4EE;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #CCFF00;
+  color: #07070A;
+}
+
+::-moz-selection {
+  background-color: #CCFF00;
+  color: #07070A;
+}
+
+/* Lenis Smooth Scroll Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07070A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252535;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CCFF00;
+}
+
+/* Background Grids & Patterns */
+.bg-cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-cyber-dots {
+  background-image: radial-gradient(rgba(204, 255, 0, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.mesh-radial-lime {
+  background: radial-gradient(circle at 50% 30%, rgba(204, 255, 0, 0.18) 0%, rgba(7, 7, 10, 0) 70%);
+}
+
+.mesh-radial-magenta {
+  background: radial-gradient(circle at 70% 60%, rgba(255, 0, 127, 0.16) 0%, rgba(7, 7, 10, 0) 65%);
+}
+
+.mesh-radial-cyan {
+  background: radial-gradient(circle at 30% 80%, rgba(0, 240, 255, 0.14) 0%, rgba(7, 7, 10, 0) 60%);
+}
+
+/* Text Stroke utility */
+.text-stroke-1 {
+  -webkit-text-stroke: 1px rgba(244, 244, 238, 0.3);
+  color: transparent;
+}
+
+.text-stroke-lime {
+  -webkit-text-stroke: 1.5px #CCFF00;
+  color: transparent;
+}
+
+.text-stroke-magenta {
+  -webkit-text-stroke: 1.5px #FF007F;
+  color: transparent;
+}
+
+/* Noise texture utility */
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Glow effects */
+.glow-box-lime {
+  box-shadow: 0 0 35px -5px rgba(204, 255, 0, 0.3);
+}
+
+.glow-box-magenta {
+  box-shadow: 0 0 35px -5px rgba(255, 0, 127, 0.3);
+}
